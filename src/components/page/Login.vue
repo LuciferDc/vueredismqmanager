@@ -55,7 +55,7 @@ export default {
       this.$refs.login.validate(valid => {
         if (valid) {
           axios
-            .post('http://localhost:3000/common/auth/login', this.param)
+            .post('/common/auth/login', this.param)
             .then(res => {
               if (res.code === 0) {
                 this.$message.success('登录成功')
